@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 10px; /* for spacing on small screens */
+}
+
+/* Calculator container */
+.calculator{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px; /* fits mobile screens */
+}
+
+/* Title inside calculator */
+.calc-title{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Display input */
+input{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin: 10px 0 20px 0;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    font-size: 32px;
+    text-align: right;
+    color: #fff;
+    outline: none;
+    word-wrap: break-word;
+}
+
+/* Buttons grid */
+.calculator > div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Buttons */
+button{
+    border: none;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #2e2e2e, #202020);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5), -3px -3px 8px rgba(255,255,255,0.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #3a3a3a, #1c1c1c);
+}
+
+/* Operators */
+.operator{
+    background: linear-gradient(145deg, #0f9b0f, #0a690a);
+    color: #fff;
+}
+
+/* Equal button */
+.equalBtn{
+    background: linear-gradient(145deg, #ff512f, #dd2476);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 81, 47, 0.6);
+}
+
+.equalBtn:hover{
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #ff6a3d, #e94057);
+}
+
+/* Signature text */
+.signature{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 4px rgba(255,255,255,0.2);
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 480px){
+    input{
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    button{
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .calc-title{
+        font-size: 22px;
+    }
+}
